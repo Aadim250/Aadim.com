@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aadim Dhakal - Aspiring Programmer</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            margin: 0;
+
+            padding: 0;
+
+            background: #f4f4f4;
+
+            color: #333;
+
+            display: flex;
+
+        }
+
+        header {
+
+            background: #35424a;
+
+            color: #ffffff;
+
+            padding: 20px 0;
+
+            text-align: center;
+
+            width: 100%;
+
+        }
+
+        header h1 {
+
+            margin: 0;
+
+            font-size: 2.5em;
+
+        }
+
+        nav {
+
+            background: #e8491d;
+
+            width: 200px;
+
+            height: 100vh;
+
+            padding: 20px 0;
+
+            position: fixed;
+
+        }
+
+        nav a {
+
+            display: block;
+
+            color: #ffffff;
+
+            padding: 15px 20px;
+
+            text-decoration: none;
+
+            text-transform: uppercase;
+
+            transition: background 0.3s, transform 0.3s;
+
+        }
+
+        nav a:hover {
+
+            background: #35424a;
+
+            transform: translateX(10px);
+
+        }
+
+        .container {
+
+            margin-left: 220px;
+
+            padding: 20px;
+
+            width: calc(100% - 220px);
+
+        }
+
+        #main {
+
+            padding: 20px;
+
+            background: #ffffff;
+
+            margin-top: 20px;
+
+            animation: fadeIn 1s;
+
+        }
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+            }
+
+            to {
+
+                opacity: 1;
+
+            }
+
+        }
+
+        footer {
+
+            background: #35424a;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 10px 0;
+
+            margin-top: 20px;
+
+            position: fixed;
+
+            width: calc(100% - 220px);
+
+            bottom: 0;
+
+            left: 220px;
+
+        }
+
+        .skills, .projects {
+
+            margin: 20px 0;
+
+        }
+
+        .skills ul, .projects ul {
+
+            list-style: none;
+
+            padding: 0;
+
+        }
+
+        .skills li, .projects li {
+
+            background: #e8491d;
+
+            color: #ffffff;
+
+            padding: 10px;
+
+            margin: 5px 0;
+
+            transition: transform 0.3s;
+
+        }
+
+        .skills li:hover, .projects li:hover {
+
+            transform: scale(1.05);
+
+        }
+
+        .comments {
+
+            margin: 20px 0;
+
+        }
+
+        .comments ul {
+
+            list-style: none;
+
+            padding: 0;
+
+        }
+
+        .comments li {
+
+            background: #e8e8e8;
+
+            padding: 10px;
+
+            margin: 5px 0;
+
+            border-radius: 5px;
+
+        }
+
+        .comments h2 {
+
+            margin-top: 0;
+
+        }
+
+        .comment-form input, .comment-form textarea {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin: 5px 0;
+
+        }
+
+        .comment-form button {
+
+            background: #e8491d;
+
+            color: #ffffff;
+
+            padding: 10px;
+
+            border: none;
+
+            cursor: pointer;
+
+            transition: background 0.3s;
+
+        }
+
+        .comment-form button:hover {
+
+            background: #35424a;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="portfolio.html">Portfolio</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <div class="container">
+
+        <header>
+
+            <h1>Aadim Dhakal</h1>
+
+            <p>Aspiring Programmer and Future Game Developer</p>
+
+        </header>
+
+        <section id="main">
+
+            <h2>About Me</h2>
+
+            <p>My name is Aadim Dhakal, a passionate aspiring programmer with a keen interest in game development. Currently a student at Uniglobe College in Kathmandu, Nepal, I am dedicated to mastering languages like JavaScript and Python, alongside HTML & CSS for web development. My goal is to create innovative games that redefine the gaming experience.</p>
+
+            
+
+            <div class="skills">
+
+                <h2>Skills</h2>
+
+                <ul>
+
+                    <li>JavaScript</li>
+
+                    <li>Python</li>
+
+                    <li>HTML & CSS</li>
+
+                    <li>Game Development</li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="comments">
+
+                <h2>Discussion</h2>
+
+                <ul id="comment-list">
+
+                    <!-- Comments will be dynamically inserted here -->
+
+                </ul>
+
+                <div class="comment-form">
+
+                    <h3>Leave a Comment</h3>
+
+                    <input type="text" id="name" placeholder="Your Name">
+
+                    <textarea id="comment" rows="4" placeholder="Your Comment"></textarea>
+
+                    <button onclick="addComment()">Post Comment</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+
+        <p>Aadim Dhakal &copy; 2024</p>
+
+    </footer>
+
+    <script>
+
+        function addComment() {
+
+            const name = document.getElementById('name').value;
+
+            const comment = document.getElementById('comment').value;
+
+
+
+            if (name && comment) {
+
+                const commentList = document.getElementById('comment-list');
+
+                const newComment = document.createElement('li');
+
+                newComment.innerHTML = `<strong>${name}</strong><p>${comment}</p>`;
+
+                commentList.appendChild(newComment);
+
+
+
+                // Clear the input fields
+
+                document.getElementById('name').value = '';
+
+                document.getElementById('comment').value = '';
+
+            } else {
+
+                alert('Please fill in both fields.');
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

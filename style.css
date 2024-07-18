@@ -1,0 +1,211 @@
+/* Reset and basic styles */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+
+    background-color: #f0f0f0;
+
+}
+
+
+
+header {
+
+    background-color: #333;
+
+    color: #fff;
+
+    padding: 10px 0;
+
+    text-align: center;
+
+}
+
+
+
+nav ul {
+
+    list-style-type: none;
+
+    padding: 0;
+
+}
+
+
+
+nav ul li {
+
+    display: inline;
+
+    margin-right: 20px;
+
+}
+
+
+
+nav ul li a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+
+
+.container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+}
+
+
+
+.hero {
+
+    background-color: #444;
+
+    color: #fff;
+
+    padding: 100px 0;
+
+    text-align: center;
+
+}
+
+
+
+.about {
+
+    background-color: #fff;
+
+    padding: 40px 0;
+
+    text-align: center;
+
+}
+
+
+
+.portfolio {
+
+    background-color: #f0f0f0;
+
+    padding: 40px 0;
+
+    text-align: center;
+
+}
+
+
+
+.portfolio .projects {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+
+    margin-top: 20px;
+
+}
+
+
+
+.portfolio .project {
+
+    background-color: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    padding: 20px;
+
+    margin: 10px;
+
+    width: calc(33% - 40px); /* Adjust width as necessary */
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    text-align: left;
+
+}
+
+
+
+.portfolio .project h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.portfolio .project p {
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.portfolio .project ul {
+
+    list-style-type: disc;
+
+    padding-left: 20px;
+
+}
+
+
+
+.contact {
+
+    background-color: #fff;
+
+    padding: 40px 0;
+
+    text-align: center;
+
+}
+
+
+
+footer {
+
+    background-color: #333;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 10px 0;
+
+    position: fixed;
+
+    bottom: 0;
+
+    width: 100%;
+
+}
