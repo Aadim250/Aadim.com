@@ -1,0 +1,109 @@
+/* General body styling */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #4A3628; /* Earthy brown tone for text */
+    background-color: #F7F1E1; /* Light parchment-like background */
+}
+
+/* Header styling */
+header {
+    background-color: rgba(255, 235, 205, 0.8); /* Light parchment-like tone */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #C19A6B; /* Earthy brown border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #6A4928; /* Warm brown text */
+}
+
+/* Navigation bar styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #4A3628;
+    background-color: rgba(255, 255, 240, 0.8); /* Light ivory tone */
+    border: 1px solid #C19A6B;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #C19A6B; /* Warm brown hover */
+    color: #FFF8DC; /* Creamy white text on hover */
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    min-height: calc(100vh - 200px); /* Ensures it takes up the remaining space after header and footer */
+    padding: 20px;
+    background-color: rgba(255, 248, 220, 0.85); /* Pale yellowish parchment tone */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centers text within the <main> element */
+}
+
+main p {
+    font-size: 1.5rem; /* Slightly larger font for emphasis */
+    line-height: 1.8;
+    margin: 0; /* Removes default margins */
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(255, 235, 205, 0.8); /* Light parchment-like tone */
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #C19A6B;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Link styling */
+a {
+    color: #6A4928; /* Warm brown */
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #C19A6B;
+}
+
+/* Section-specific headings */
+h2 {
+    color: #6A4928; /* Warm brown */
+    border-bottom: 1px solid #C19A6B; /* Subtle underline */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Page fade-out transition */
+body {
+    transition: opacity 0.5s ease-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
